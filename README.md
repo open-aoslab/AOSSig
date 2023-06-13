@@ -48,30 +48,30 @@ AOSSig dataset is a real-scene Chinese handwritten signature documents dataset, 
   │  ├─L1
   │  │  ├─data
   │  │  │  ├─training
-  │  │  │  │  ├─train_L1_ 00001.jpg
-  │  │  │  │  ├─train_L1_ 00002.jpg
+  │  │  │  │  ├─train_L1_00001.jpg
+  │  │  │  │  ├─train_L1_00002.jpg
   │  │  │  │  ├─...
   │  │  │  ├─test
-  │  │  │  │  ├─test_L1_ 00001.jpg
-  │  │  │  │  ├─test_L1_ 00002.jpg
+  │  │  │  │  ├─test_L1_00001.jpg
+  │  │  │  │  ├─test_L1_00002.jpg
   │  │  │  │  ├─...
   │  │  ├─anno_label
   │  │  │  ├─training
-  │  │  │  │  ├─train_L1_ 00001.txt
-  │  │  │  │  ├─train_L1_ 00002.txt
+  │  │  │  │  ├─train_L1_00001.txt
+  │  │  │  │  ├─train_L1_00002.txt
   │  │  │  │  ├─...
   │  │  │  ├─test
-  │  │  │  │  ├─test_L1_ 00001.txt
-  │  │  │  │  ├─test_L1_ 00002.txt
+  │  │  │  │  ├─test_L1_00001.txt
+  │  │  │  │  ├─test_L1_00002.txt
   │  │  │  │  ├─...
   │  │  ├─anno_mask
   │  │  │  ├─training
-  │  │  │  │  ├─train_L1_ 00001.png
-  │  │  │  │  ├─train_L1_ 00002.png
+  │  │  │  │  ├─train_L1_00001.png
+  │  │  │  │  ├─train_L1_00002.png
   │  │  │  │  ├─...
   │  │  │  ├─test
-  │  │  │  │  ├─test_L1_ 00001.png
-  │  │  │  │  ├─test_L1_ 00002.png
+  │  │  │  │  ├─test_L1_00001.png
+  │  │  │  │  ├─test_L1_00002.png
   │  │  │  │  ├─...
   │  ├─L2
   │  │  ├─data
@@ -99,12 +99,12 @@ AOSSig dataset is a real-scene Chinese handwritten signature documents dataset, 
   ├─AOSDoc
   │  ├─L1
   │  │  ├─data
-  │  │  │  ├─Templates_L1_ 00001.jpg
-  │  │  │  ├─Templates_L1_ 00002.jpg
+  │  │  │  ├─Templates_L1_00001.jpg
+  │  │  │  ├─Templates_L1_00002.jpg
   │  │  │  ├─...
   │  │  ├─anno_label
-  │  │  │  ├─Templates_L1_ 00001.txt
-  │  │  │  ├─Templates_L1_ 00002.txt
+  │  │  │  ├─Templates_L1_00001.txt
+  │  │  │  ├─Templates_L1_00002.txt
   │  │  │  ├─...
   │  ├─L2
   │  │  ├─data
@@ -125,16 +125,16 @@ AOSSig dataset is a real-scene Chinese handwritten signature documents dataset, 
   ├─Bruce-force_syn_data
   │  ├─L1
   │  │  ├─data
-  │  │  │  ├─L1_ 00001.jpg
-  │  │  │  ├─L1_ 00002.jpg
+  │  │  │  ├─L1_00001.jpg
+  │  │  │  ├─L1_00002.jpg
   │  │  │  ├─...
   │  │  ├─anno_label
-  │  │  │  ├─L1_ 00001.txt
-  │  │  │  ├─L1_ 00002.txt
+  │  │  │  ├─L1_00001.txt
+  │  │  │  ├─L1_00002.txt
   │  │  │  ├─...
   │  │  ├─anno_mask
-  │  │  │  ├─L1_ 00001.png
-  │  │  │  ├─L1_ 00002.png
+  │  │  │  ├─L1_00001.png
+  │  │  │  ├─L1_00002.png
   │  │  │  ├─...
   │  ├─L2
   │  │  ├─data

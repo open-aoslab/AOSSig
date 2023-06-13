@@ -20,7 +20,7 @@ This is the official repository for AOSSig dataset, associated with the paper: *
   * The AOSSig dataset can only be used for non-commercial research purposes. For scholar or organization who wants to use the AOSSig dataset, please first fill in this [Application Form](./ApplicationForm/Application-Form-for-Using-AOSSig_Chinese.docx) and sign the [Legal Commitment](./Application_Form/Legal-Commitment_Chinese.docx) and email them to us. When submitting the application form to us, please list or attached 1-2 of your publications in the recent 6 years to indicate that you (or your team) do research in the related research fields of handwriting verification, handwriting analysis and recognition, document image processing, and so on. **(Note: Please fill in the Chinese version of Application Form and Legal Commitment, the English version is for reference only)**
   * All users must follow all use conditions; otherwise, the authorization will be revoked.
 * Download
-  You can download the dataset by following this [link](https://pan.baidu.com/share/init?surl=8KTsYGlKkFMJGlmdHG_2sQ). We will give you the file extraction password after your application has been received and approved.
+  You can download the dataset by following this links:  [Baidu Yun](https://pan.baidu.com/share/init?surl=8KTsYGlKkFMJGlmdHG_2sQ) | [Google Drive](https://drive.google.com/drive/folders/1-n_aqhI7BLCh6HG_vgp5FlXtNLr-nS1q?usp=sharing). We will give you the file extraction password after your application has been received and approved.
 
 ## Description
 
@@ -151,7 +151,7 @@ AOSSig dataset is a real-scene Chinese handwritten signature documents dataset, 
 ## Experimental-Result
 
 * Detection Benchmark
-  ![detection_benchmark.png](images\benchmark\detection_benchmark.png)
+  <p><img src='images\benchmark\detection_benchmark.png', align='center'/></p>
   Experimental results show that all detection methods achieve good results148 on AOSSig4000. The performance gap between segmentation-based detection methods and anchor-based detection methods is insignificant. In terms of IoU ≥ 0.5 evaluation metric, PSENet achieves the best performance (F = 0.966) compared to other models and score better on our own dataset than on scene text datasets such as Total-Text (F = 0.809) and CTW1500 (F = 0.822). DETR based on Transformer architecture has good performance under IoU ≥ 0.75.
 * Segmentation Benchmark
 
@@ -221,6 +221,4 @@ AOSSig Dataset should be used and distributed under [Creative Attribution-NonCom
 
 ## Copyright
 
-# AOSSig Dataset Released
-
-For commercial purpose usage, please contact Chongqing Handwriting Big Data Research Institute:  [qinxunhui@aosign.cn]()
+For commercial purpose usage, please contact Chongqing Handwriting Big Data Research Institute:[qinxunhui@aosign.cn]()

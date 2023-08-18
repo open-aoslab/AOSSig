@@ -33,7 +33,7 @@ AOSSig dataset is a real-scene Chinese handwritten signature documents dataset, 
 ## Collection
 
 * AOSSig4000
-  The data of AOSSig4000 is obtained by artificial imitation following a real handwritten signature signing process. We collected 951 document templates from the internet and color-printed for 108 volunteers to sign in. Afterward, various noises including fingerprints and stamps were randomly added to the templates. As a result, 4000 documents were photographed or scanned into JPEG image format. Volunteers were given the freedom to choose ink colors of blue, red, and black, while all signature names were randomly generated according to Chinese naming traditions. Defaced, discolored, or incomplete signatures were filtered out at the end.
+  We collected 951 document templates from the internet, constructed and color-printed 5,000 paper blank Chinese document templates for 150 volunteers to sign in. Among them, various noises including fingerprints and stamps were randomly added to the templates. Volunteers were given the freedom to choose ink colors of blue, red, and black at random while all signature names were generated according to Chinese naming traditions. During the data collection process, such as ink leakage or lack of ink in the signature pen, errors caused by improper operation of the signatory, or unrealistic scribbles, factors are inevitable. Such situations often led to incomplete signatures or serious adhesion. Signatures could not meet the actual collection needs, so we manually screened out such data. As a result, 4,000 documents signed by 108 volunteers were photographed or scanned into JPEG image format, and we split the training and test sets with complete independence of volunteers as the principle. The collection process of AOSSig4000 is blind to any personal identity information and can be safely disclosed to the public. Firstly, templates collected from the internet do not contain any sensitive information; secondly, contents of signatures are not volunteers' real names; thirdly, seals are customized for real scenes and their contents are marked for data collection and testing purposes only; and finally, all fingerprints come from merely five volunteers and do not match with the signatures.
 * AOSSDoc
   The AOSSDoc is built based on 951 document templates obtained in AOSSig4000. By manually adding a variety of noises referring to the difficult definition of L1 ~L5, constructed 3182 blank Chinese templates with different styles. Then, we proceed to mark the position box for several signatures on the templates using the labelme tool, which supports subsequent developers to generate corresponding signatures at the correct signature positions.
 * AOSSynDoc
@@ -48,30 +48,30 @@ AOSSig dataset is a real-scene Chinese handwritten signature documents dataset, 
   │  ├─L1
   │  │  ├─data
   │  │  │  ├─training
-  │  │  │  │  ├─train_L1_00001.jpg
-  │  │  │  │  ├─train_L1_00002.jpg
+  │  │  │  │  ├─train_L1_ photo_black_nothing_00001.jpg
+  │  │  │  │  ├─train_L1_scan_blue_nothing_00002.jpg
   │  │  │  │  ├─...
   │  │  │  ├─test
-  │  │  │  │  ├─test_L1_00001.jpg
-  │  │  │  │  ├─test_L1_00002.jpg
+  │  │  │  │  ├─test_L1 photo_black_nothing_00001_writer001.jpg
+  │  │  │  │  ├─test_L1_scan_blue_nothing_00002_writer002.jpg
   │  │  │  │  ├─...
   │  │  ├─anno_label
   │  │  │  ├─training
-  │  │  │  │  ├─train_L1_00001.txt
-  │  │  │  │  ├─train_L1_00002.txt
+  │  │  │  │  ├─train_L1_ photo_black_nothing_00001.txt
+  │  │  │  │  ├─train_L1_scan_blue_nothing_00002.txt
   │  │  │  │  ├─...
   │  │  │  ├─test
-  │  │  │  │  ├─test_L1_00001.txt
-  │  │  │  │  ├─test_L1_00002.txt
+  │  │  │  │  ├─test_L1 photo_black_nothing_00001_writer001.txt
+  │  │  │  │  ├─test_L1_scan_blue_nothing_00002_writer002.txt
   │  │  │  │  ├─...
   │  │  ├─anno_mask
   │  │  │  ├─training
-  │  │  │  │  ├─train_L1_00001.png
-  │  │  │  │  ├─train_L1_00002.png
+  │  │  │  │  ├─train_L1_ photo_black_nothing_00001.png
+  │  │  │  │  ├─train_L1_scan_blue_nothing_00002.png
   │  │  │  │  ├─...
   │  │  │  ├─test
-  │  │  │  │  ├─test_L1_00001.png
-  │  │  │  │  ├─test_L1_00002.png
+  │  │  │  │  ├─test_L1 photo_black_nothing_00001_writer001.png
+  │  │  │  │  ├─test_L1_scan_blue_nothing_00002_writer002.png
   │  │  │  │  ├─...
   │  ├─L2
   │  │  ├─data
@@ -88,11 +88,16 @@ AOSSig dataset is a real-scene Chinese handwritten signature documents dataset, 
 
   * The AOSSig4000 folder contains five subfolders, each of them is split into three parts which named data, anno_label and anno_mask respectively.
   * The document images in data are saved in the JPEG format, the pixel-level annotated images in anno_mask are saved in the PNG format,  the texts in anno_label are saved in the TXT format.
-  * The naming of each file follows the same format: flag_level_index.
+  * The naming of each file follows the same format: flag_level_device_color_noise_index_writer.
     * The flag is train or test, train indicate that this file is used for training, while test
       indicates that it is a test sample,
     * The level indicates the type of data difficulty of levels,
-    * The index indicates the number of this file (.jpg or .txt or .png)
+    * The device indicates the device type of data collection, which can be either a mobile phone or a high-speed camera, represented by photo and scan respectively,
+    * The color indicates the color of the signature pen, including black, red, and blue,
+    * The noise indicates the type of data interference, which includes nothing, fingerprint, stamp, underline, printed font, degradation, and others. If a certain data has composite noise, it will be connected with the symbol *,
+    * The index indicates the number of this file (.jpg or .txt or .png),
+    * The writer represents the signatory category information but only test sets include this attribute label and have not been added to the training set for the time being.
+      
 * AOSDoc
 
   ```

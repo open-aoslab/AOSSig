@@ -1,0 +1,38 @@
+data:
+  background:
+    data_dir: /nas-02/hdd/chenshuanghao/sig_detection_open/templates_total_split/test/data # 文档背景目录
+    data_save_dir: /nas-02/hdd/chenshuanghao/sig_extraction_generation/sig_detect_cases/violence/test/L1/data # 合成后文档背景保存目录 
+  signature:
+    sig_img_dir: /nas-02/hdd/chenshuanghao/sig_extraction_generation/ChiSig_split/test/data/ # 手写签名目录
+    sig_mask_dir: /nas-02/hdd/chenshuanghao/sig_extraction_generation/ChiSig_split/test/mask/ # 手写签名Mask目录 
+    sig_loc_dir: /nas-02/hdd/chenshuanghao/sig_detection_open/templates_total/anno_json # 手写签名位置标记路径(AOSSDoc)
+    mask_save_dir: /nas-02/hdd/chenshuanghao/sig_extraction_generation/sig_detect_cases/violence/test/L1/mask # 合成掩膜结果保存目录
+    anno_save_dir: /nas-02/hdd/chenshuanghao/sig_extraction_generation/sig_detect_cases/violence/test/L1/anno # 合成签名位置保存目录 
+compose:
+  loc_label: 
+    file_type: 'json' # 位置标记文件类型
+    mode: 'label'   # 获取签名位置类型，支持2中模式: random:随机生成指定个数的签名位， label：基于人工预先标定的签名位
+  signature:
+    select_mode: 'sig_bg' # 选择AOSSDoc特定类型签名位，支持4种模式:sig,bg,sig_bg,sig_bg_random; 
+    random_ratio: [0.7, 0.8, 0.9, 1.0] # 随机缩放尺度
+    ph_sh_ratio: 17 # 背景图像高度与签名高度比例 
+    pw_sw_ratio: 8  # 背景图像宽度与签名高度比例
+    sw_sh_ratio: 1.6 # 签名宽度与签名高度比例
+    max_nums: 10  # 获取随机签名位最大个数 
+      
+  iter_max_nums: 15  # 每张图片最多合成轮次数
+  fusion: 'violence' # 图像融合方式,支持：possion、violence、text_render
+  text_render:
+    color_select: 'sample' # 签名颜色获取方式，两种模式：fix， sample
+    sig_collect_path: 'sig_generation/meta/sig_pixels.npy'
+
+  
+ 
+
+
+
+
+
+
+
+
